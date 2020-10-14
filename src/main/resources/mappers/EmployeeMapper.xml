@@ -117,4 +117,11 @@
   <select id="findAllEmployee" resultMap="BaseResultMap">
     select * from employee
   </select>
+  <delete id="deleteEmployeesById" parameterType="java.util.ArrayList">
+    delete from employee
+    where id in
+    <foreach collection="id" item="item" separator="," open="(" close=")">
+      #{item,jdbcType=INTEGER}
+    </foreach>
+  </delete>
 </mapper>

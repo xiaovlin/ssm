@@ -6,6 +6,7 @@
     <settings>
         <!--开启自动驼峰命名规则,数据库带_字段名自动转换为驼峰命名，user_id -> userId -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
     <!--批量命名别名,默认命名为的别名为类名小写-->
     <typeAliases>

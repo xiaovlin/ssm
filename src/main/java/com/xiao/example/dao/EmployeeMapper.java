@@ -1,5 +1,6 @@
 package com.xiao.example.dao;
 import com.xiao.example.model.Employee;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface EmployeeMapper {
     int updateByPrimaryKey(Employee record);
 
     List<Employee> findAllEmployee();
+
+    Integer deleteEmployeesById(@Param("id")Long[] id);
 }
